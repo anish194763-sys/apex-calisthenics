@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve Your Plan — Apex Calisthenics</title>
+  <meta name="description" content="Reserve a premium Apex Calisthenics meal plan." />
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/favicon.svg" alt="" />
+        <span class="brand-text">APEX<span>.</span>CALISTHENICS</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#guides">Guides</a>
+        <a href="../index.html#workouts">Free Workouts</a>
+        <a href="meal-plan.html">Meal Plans</a>
+        <a href="../index.html#community">Community</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../index.html" class="btn btn-ghost">Back Home</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-panel">
+      <a href="../index.html#guides">Guides</a>
+      <a href="../index.html#workouts">Free Workouts</a>
+      <a href="meal-plan.html">Meal Plans</a>
+      <a href="../index.html#community">Community</a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="meal-plan.html">Meal Plans</a>
+        <span>/</span>
+        <span>Reserve</span>
+      </div>
+      <span class="eyebrow">Reserve your plan</span>
+      <h1>One step from your first weekly menu.</h1>
+      <p class="lede">Payment isn't wired up on this preview yet — reserving a spot below sends your details to the Apex team, who follow up by email to complete setup.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="checkout-grid">
+        <div class="form-card">
+          <form class="checkout-form" novalidate>
+            <div class="field" data-field="name">
+              <label for="full-name">Full name</label>
+              <input type="text" id="full-name" name="name" placeholder="Dana Okwuosa" required />
+              <span class="error">Enter your full name.</span>
+            </div>
+            <div class="field" data-field="email">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="dana@email.com" required />
+              <span class="error">Enter a valid email address.</span>
+            </div>
+
+            <div class="field">
+              <label>Plan</label>
+              <div class="plan-select">
+                <label class="plan-option">
+                  <span><input type="radio" name="plan" value="lean-mass" /> Lean Mass Protocol</span>
+                  <span class="p-price">$18.40/mo</span>
+                </label>
+                <label class="plan-option">
+                  <span><input type="radio" name="plan" value="recomposition" /> Recomposition Blueprint</span>
+                  <span class="p-price">$24.60/mo</span>
+                </label>
+                <label class="plan-option">
+                  <span><input type="radio" name="plan" value="competition-cut" /> Competition Cut</span>
+                  <span class="p-price">$31.90</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Reserve My Spot</button>
+            <p class="note-line">No payment is collected on this preview — you'll get an email to finish setup.</p>
+          </form>
+
+          <div class="confirm-panel">
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Spot reserved</h3>
+            <p data-confirm-detail>A confirmation is on its way.</p>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          <div class="summary-line"><span>Plan</span><strong data-summary-name>Recomposition Blueprint</strong></div>
+          <div class="summary-line"><span>Price</span><strong data-summary-price>$24.60/mo</strong></div>
+          <div class="summary-line"><span>Billing cycle</span><strong>Monthly, cancel anytime</strong></div>
+          <div class="summary-total"><span>Due today</span><span data-summary-total>$24.60/mo</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-bottom">
+        <span>© 2026 Apex Calisthenics. Built for the bar, the park, and the living room floor.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>
