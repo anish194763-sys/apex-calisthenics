@@ -1,91 +1,69 @@
-# Apex Calisthenics - Bodyweight Training Platform
+# Apex Calisthenics - Bodyweight Training Platform (React)
 
-A modern, responsive web platform for bodyweight fitness enthusiasts to access calisthenics guides, free workout routines, and premium meal plans.
+A modern, responsive React web application for bodyweight fitness enthusiasts to access calisthenics guides, free workout routines, and premium meal plans.
+
+Rewritten from the original static/Dynamic project as a full React SPA using Vite, TypeScript, and React Router.
 
 ## Features
 
-✅ **Muscle Building Guides** - Learn leverage progression and proper calisthenics techniques
-✅ **Free Workouts** - Full-body calisthenics routines ready to use
-✅ **Premium Meal Plans** - Customized nutrition strategies for muscle growth
-✅ **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
-✅ **Modern UI** - Built with Tailwind CSS for a sleek dark theme
-✅ **Payment Integration Ready** - Stripe/PayPal checkout infrastructure
+- **Muscle Building Guides**: Learn leverage progression, joint-angle drills, and proper calisthenics techniques.
+- **Free Workouts**: Full-body calisthenics routines with exercise breakdowns, tempo guidelines, and rep schemes.
+- **Workout Detail**: In-depth Push–Pull Reset routine with interactive exercise list and coach cues.
+- **Premium Meal Plans**: Recomposition Blueprint, Lean Mass Protocol, and Competition Cut meal plans with macro breakdowns and sample day menus.
+- **Plan Reservation & Checkout**: Interactive plan selection with order summary calculation, form validation, and spot reservation confirmation.
+- **Responsive Navigation**: Mobile navigation drawer, active state indicators, and smooth anchor scrolling.
+- **Scroll Reveal Animations**: Smooth scroll-triggered fade-ins across sections.
+- **Newsletter Signup**: Live interactive newsletter form with feedback state.
+- **Custom 404 Route**: Branded fallback page for missing routes.
+
+## Tech Stack
+
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **React Router 7**
 
 ## Project Structure
 
 ```
 apex-calisthenics/
-├── index.html          # Main landing page
-├── css/
-│   └── styles.css      # Custom styles
-├── js/
-│   ├── main.js         # Main functionality
-│   └── checkout.js     # Payment processing
-├── assets/
-│   ├── images/         # Product and guide images
-│   └── icons/          # SVG icons
-├── pages/
-│   ├── workout-detail.html
-│   ├── meal-plan.html
-│   └── checkout.html
-├── package.json        # Dependencies
-└── README.md           # This file
+├── public/
+│   └── assets/icons/favicon.svg
+├── src/
+│   ├── components/
+│   │   ├── Navbar.tsx      # Navigation bar with mobile drawer
+│   │   └── Footer.tsx      # Site footer with newsletter form
+│   ├── data/
+│   │   └── content.ts      # Plans, exercises, meals, testimonials
+│   ├── hooks/
+│   │   └── useScrollReveal.ts # IntersectionObserver scroll reveal
+│   ├── pages/
+│   │   ├── HomePage.tsx          # Landing page with hero, guides, workouts, plans
+│   │   ├── WorkoutDetailPage.tsx # Push-Pull Reset routine
+│   │   ├── MealPlanPage.tsx      # Recomposition Blueprint detail
+│   │   ├── CheckoutPage.tsx      # Plan reservation flow
+│   │   └── NotFoundPage.tsx      # 404 error page
+│   ├── App.tsx             # Route definitions & scroll restoration
+│   ├── main.tsx            # App entry point
+│   └── styles.css          # Design system & responsive styles
+├── index.html              # HTML entry point
+├── package.json            # Dependencies and scripts
+├── tsconfig.json           # TypeScript configuration
+└── vite.config.ts          # Vite build config
 ```
 
 ## Getting Started
 
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Node.js (optional, for development tools)
-
-### Installation
-
-1. Clone the repository:
+### Development
 ```bash
-git clone https://github.com/anish194763-sys/apex-calisthenics.git
-cd apex-calisthenics
+npm install
+npm run dev
 ```
 
-2. Open `index.html` in your browser or serve with a local server:
+### Build
 ```bash
-npx http-server
+npm run build
 ```
-
-## Technologies Used
-
-- **HTML5** - Semantic markup
-- **Tailwind CSS** - Utility-first CSS framework
-- **JavaScript** - Vanilla JS for interactivity
-- **Payment APIs** - Stripe/PayPal integration ready
-
-## Features in Development
-
-- 🔄 User authentication & accounts
-- 📊 Progress tracking dashboard
-- 💬 Community forum
-- 📱 Mobile app
-- 🎥 Video tutorials for exercises
-- 📧 Email newsletter signup
-
-## Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## License
-
-This project is licensed under the MIT License - see LICENSE file for details.
-
-## Contact
-
-For questions or feedback, reach out through:
-- GitHub Issues
-- Email: support@apexcalisthenics.com
-
----
-
-**Built with 💪 for the calisthenics community**
+MIT
